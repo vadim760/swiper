@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+html,
+body {
+    background-color: white;
+    position: relative;
+    height: 3125rem;
+}
+
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг на половину размера элемента */
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 100; 
+    background-color: #fff; 
+    border-radius: 50px; 
+
+    transition: transform 0.3s ease;
+ 
+}
+.active {
+    visibility: visible;
+}
+.close__button {
+    cursor: pointer;
+    position: fixed;
+    right: -100px;
+    top: 0;
+    z-index: 101;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+.mySwiper  {
+    max-width: 103%;
+    height: 300px;
+}
+.swiper {
+
+  width: 103%;
+  height: auto;
+  border-radius: 50px;
+
+}
+
+.swiper-slide {
+  max-width: 100%;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  
+
+}
+
+
+.swiper-button-next {
+    right: 0;
+    left: 87.125rem;
+    color: #fff;
+}
+.swiper-button-prev {
+    left: -50px;
+    color: #fff;
+}
+.description__container {
+    padding-top: 1.875rem;
+    padding-left: 3.125rem;
+}
+
+.vacancy__name {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(239, 228, 26);
+    border-radius: 30px;
+    padding: 5px 10px;
+    width: max-content;
+    max-width: 90%;
+    
+    font-size: 20px;
+}
+.responsibilities {
+    display: flex;
+    flex-direction:column;
+    margin-top: .625rem;
+    row-gap: 5px;
+
+}
+.responsibilities__list {
+    max-width: 95%;
+}
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5px;
+    align-items: flex-start;
+
+}
+.advantages__list .advantages__image {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    transition: transform 0.3s ease; 
+}
+.first__string,
+.second__stroke {
+    display: flex;
+    background-color: rgb(239, 228, 26);
+
+    border-radius: 13px;
+    padding: 5px;
+
+    width: max-content;
+    
+    margin-right: 30px;
+
+}
+.second__stroke {
+    border-bottom-left-radius: 3px;
+
+}
+.income__container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.income__text {
+    color: rgba(0, 0, 0, 0.5);
+}
+.orange__text {
+    padding-right: 10px;
+}
+.income {
+    font-size: 40px;
+    color: rgb(237, 119, 30);
+    font-weight: bold;
+
+}
+
+.item__button {
+    cursor: pointer;
+    margin-left: 50px;
+    border: none;
+    background-color: #ff6900;
+  border-radius: 120px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 20px;
+  max-width: 400px;
+  min-height: 64px;
+  padding: 23px;
+  position: relative;
+  width: 100%;
+}
+.modal__image {
+    display: block;
+   
+    height: 800px;
+    border-radius: 2.5rem;
+    object-fit: cover;
+}
+.cards__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    height: 900px;
+    
+
+
+}
+.cards__list {
+    display: flex;
+    gap: 30px;
+}
+
+.cards__item {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transition-property: border-color, border-radius;
+    transition-timing-function: ease-in;
+    border: 7px solid transparent;
+    max-width: 299px;
+  
+    
+
+}
+.cards__image {
+
+    height: auto;
+    object-fit: cover;
+    border-radius: .9375rem;
+    transition: all 0.3s ease-in-out;
+    transition-property: border-radius;
+    transition-timing-function: ease-in;
+    filter:brightness(75%) ;
+}
+
+
+.cards__text__container {
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    bottom: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    transition: transform 0.4s ease;
+}
+
+.cards__text {
+    font-weight: bold;
+    background-color: rgb(30,89,69) ;
+    width: max-content;
+    padding: .3125rem;
+    color: #fff;
+    border-radius: 30px 30px 30px 0px;
+}
+.price {
+    position: absolute;
+    bottom: 10px;
+    padding-left: 20px;
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    
+}
+.price__text {
+    font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+    
+
+}
+.hidden__text__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    transform: translateY(105%);
+    transition: transform 0.4s ease
+
+}
+.hidden__text {
+    font-weight: bold;
+    font-family: 'Arial' sans-serif; 
+    color: #252031;
+    font-size: 22px;
+ 
+
+}
+
+
+.slider2-next {
+    background-image: url(img/next.png);
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 4rem;
+    left: 1680px;
+    transition: opacity 0.3s ease;
+}
+.slider2-prev {
+    background-image: url(img/next.png);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    width: 4rem;
+    height: 4rem;
+    left: 105px;
+    transition: opacity 0.3s ease;
+}
+.slider2-slide {
+    width: 18.75rem;
+    height: auto;
+
+}
+.slider2-container {
+    max-width: 85%;
+    height: 300px;
+    border-radius: 0px;
+}
+.slider2-wrapper {
+    display: flex;
+}
+.slider2-slide {
+    width: 200px;
+}
+.cards__item:hover {
+    
+    border-color: #444;
+    border-radius: 23px 23px 23px 0px;
+    
+
+}
+.cards__item:hover .cards__image {
+
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 0px;
+
+
+
+}
+.cards__item:hover .cards__text__container {
+    transform: translateY(-60%);
+
+}
+.cards__item:hover .price {
+    transform: translateY(-150%);
+    opacity: 0;
+
+}
+.cards__item:hover .hidden__text__container {
+    transform: translateY(-15%);
+}
+.advantages__list:hover .advantages__image {
+    transform: scale(1.2); 
+}
+.slider2-prev.swiper-button-disabled,
+.slider2-next.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+.slider1-prev.swiper-button-disabled,
+.slider1-next.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+.slider2-next::after {
+    content: '';
+
+}
+.slider2-prev::before {
+    content: '';
+
+}
+.slider2-prev::after {
+    content: '';
+
+}
+@media screen and (max-width: 110rem) {
+    .modal {
+        max-width: 58%;
+        max-height: 80%;
+        border-radius: 50px;
+    }
+
+    .modal__image {
+        width: 400px;
+        max-height: 700px;
+        border-radius: 20px;
+    }
+
+    .description__container {
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .vacancy__name {
+        font-size: 18px;
+    }
+
+    .item__button {
+        font-size: 18px;
+        padding: 15px;
+        margin-left: 80px;
+    }
+    .swiper-button-next {
+        left: 68.1rem;
+    }
+
+    .slider2-container {
+        min-width: 76%;
+    }
+    .slider2-next {
+        left: 90.625rem;
+    }
+    .slider2-prev {
+        left: 5.6875rem;
+    }
+}
+@media screen and (max-width: 87.5rem) {
+
+    
+    .modal {
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, 10%); /* Сдвиг на половину размера элемента */
+        max-width: 58%;
+        max-height: 80%;
+        border-radius: 50px;
+    }
+
+    .modal__image {
+        width: 100%;
+        max-height: 700px;
+        border-radius: 20px;
+    }
+
+    .description__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 20px;
+        min-height: 790.5px;
+        
+    }
+
+    .vacancy__name {
+        font-size: 18px;
+    }
+
+    .item__button {
+        font-size: 18px;
+        padding: 15px;
+        margin-left: 0;
+    }
+    .slider1-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .advantages__list {
+        max-width: 100px;
+    }
+    .advantages__list .advantages__image {
+        
+        width: 16px;
+        height: 16px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        transition: transform 0.3s ease; 
+    }
+    .slider2-container {
+        max-width: 76%;
+    }
+    .slider2-next {
+        display: block;
+        left: 66.6rem;
+    }
+    .slider2-prev {
+        display: block;
+        left: 3.7rem;
+    }
+
+}
+
+@media screen and (max-width: 62.5rem) {
+    .modal {
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, 10%); /* Сдвиг на половину размера элемента */
+        max-width: 70%;
+        min-height: 790.5px;
+        border-radius: 50px;
+    }
+
+    .modal__image {
+        width: 100%;
+        max-height: 600px;
+        border-radius: 20px;
+    }
+
+    .description__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 20px;
+        font-size: 12px;
+        height: 900px;
+        
+    }
+
+    .vacancy__name {
+        font-size: 30px;
+        max-width: 500px;
+
+    }
+
+    .item__button {
+        
+        width: 500px;
+        font-size: 30px;
+        margin-right: 24px;
+
+
+    }
+    .slider1-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     
+    }
+
+    .advantages {
+
+        grid-template-columns: repeat(2, 1fr);
+ 
+        font-size: 20px;
+     
+    }
+    .advantages__list {
+        max-width: 400px;
+        
+    }
+    .income {
+        font-size: 40px;
+    }
+    .income__text {
+        font-size: 25px;
+        max-width: 400px;
+    }
+    .responsibilities {
+        font-size: 16px;
+        max-width: 480px;
+
+}
+    .hidden__text {
+        display: none;
+    }
+    .cards__container {
+        margin-left: 0;
+    }
+    .slider2-container {
+        max-width: 117%;
+    }
+    .slider2-next {
+    display: none;
+    }
+    .slider2-prev {
+       display: none;
+    }
+    .slider1-prev,
+    .slider1-next {
+        display: none;
+    }
+}
+@media screen and (max-width: 20rem) {
+    .modal {
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, 10%); /* Сдвиг на половину размера элемента */
+        max-width: 70%;
+        max-height: 1077.5px;
+        border-radius: 50px;
+    }
+
+    .modal__image {
+        width: 100%;
+        max-height: 300px;
+        border-radius: 20px;
+    }
+
+    .description__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 20px;
+        font-size: 12px;
+        
+    }
+
+    .vacancy__name {
+        font-size: 10px;
+        max-width: 80%;
+        margin-right: 30px;
+    }
+
+    .item__button {
+        width: 220px;
+        font-size: 18px;
+        margin-right: 24px;
+
+
+    }
+    .slider1-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     
+    }
+
+    .advantages {
+
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 8px;
+    }
+    .income {
+        font-size: 28px;
+    }
+    .income__text {
+        font-size: 9px;
+        max-width: 130px;
+    }
+    .responsibilities {
+        max-width: 220px;
+    }
+    .hidden__text {
+        display: none;
+    }
+    .cards__container {
+        margin-left: 0;
+    }
+    .slider2-container {
+        max-width: 117%;
+    }
+    .slider2-next {
+    display: none;
+    }
+    .slider2-prev {
+       display: none;
+    }
+    .slider1-prev,
+    .slider1-next {
+        display: none;
+    }
+
+}
