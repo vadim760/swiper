@@ -63,15 +63,17 @@ body {
 
 }
 
-.swiper-slide {
-  max-width: 100%;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
+.slider2-slide {
+
   
 
 }
-
+.slider1-slide {
+    max-width: 100%;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+}
 
 .swiper-button-next {
     right: 0;
@@ -203,16 +205,18 @@ body {
     transition-property: border-color, border-radius;
     transition-timing-function: ease-in;
     border: 7px solid transparent;
-    max-width: 299px;
+    border-radius: 49px 46px 46px 0px;
+    height: 295px;
+    width: 230px;
   
     
 
 }
 .cards__image {
-
-    height: auto;
+    width: 13.625rem;
+    height: 17.625rem;
     object-fit: cover;
-    border-radius: .9375rem;
+    border-radius: 40px;
     transition: all 0.3s ease-in-out;
     transition-property: border-radius;
     transition-timing-function: ease-in;
@@ -226,8 +230,9 @@ body {
     
     position: absolute;
     bottom: 50px;
-    font-size: 20px;
-    padding-left: 20px;
+    font-size: 19px;
+
+    padding-left: .5rem;
     transition: transform 0.4s ease;
 }
 
@@ -235,21 +240,21 @@ body {
     font-weight: bold;
     background-color: rgb(30,89,69) ;
     width: max-content;
-    padding: .3125rem;
+    padding: .625rem;
     color: #fff;
     border-radius: 30px 30px 30px 0px;
 }
 .price {
     position: absolute;
     bottom: 10px;
-    padding-left: 20px;
+    padding-left: .625rem;
     opacity: 1;
     transition: transform 0.4s ease, opacity 0.3s ease;
     
 }
 .price__text {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 26px;
     color: whitesmoke;
     
 
@@ -259,16 +264,16 @@ body {
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    padding-left: 20px;
-    transform: translateY(105%);
+    padding-left: .625rem;
+    transform: translateY(120%);
     transition: transform 0.4s ease
 
 }
 .hidden__text {
     font-weight: bold;
     font-family: 'Arial' sans-serif; 
-    color: #252031;
-    font-size: 22px;
+    color: #fff;
+    font-size: 18px;
  
 
 }
@@ -279,7 +284,7 @@ body {
     background-repeat: no-repeat;
     width: 4rem;
     height: 4rem;
-    left: 1680px;
+    left: 106.25rem;
     transition: opacity 0.3s ease;
 }
 .slider2-prev {
@@ -288,43 +293,38 @@ body {
     transform: rotate(180deg);
     width: 4rem;
     height: 4rem;
-    left: 105px;
+    left: 57px;
     transition: opacity 0.3s ease;
 }
-.slider2-slide {
-    width: 18.75rem;
-    height: auto;
 
-}
 .slider2-container {
-    max-width: 85%;
-    height: 300px;
+    max-width: 90%;
+    height: 500px;
     border-radius: 0px;
 }
 .slider2-wrapper {
     display: flex;
+    margin-top: 100px;
 }
-.slider2-slide {
-    width: 200px;
-}
+
 .cards__item:hover {
     
     border-color: #444;
-    border-radius: 23px 23px 23px 0px;
+    border-radius: 49px 49px 49px 0px;
     
 
 }
 .cards__item:hover .cards__image {
 
-    height: auto;
+    height: 17.625rem;
     object-fit: cover;
-    border-radius: 15px 15px 15px 0px;
+    border-radius: 40px 46px 46px 0px;
 
 
 
 }
 .cards__item:hover .cards__text__container {
-    transform: translateY(-60%);
+    transform: translateY(-40%);
 
 }
 .cards__item:hover .price {
@@ -333,7 +333,7 @@ body {
 
 }
 .cards__item:hover .hidden__text__container {
-    transform: translateY(-15%);
+    transform: translateY(-25%);
 }
 .advantages__list:hover .advantages__image {
     transform: scale(1.2); 

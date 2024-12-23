@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const swiper2 = new Swiper('.slider2-container', {
         slidesPerView: 5,  
-        slidesPerGroup: 1, 
+        slidesPerGroup: 1,
+
         navigation: {
             nextEl: '.slider2-next',
             prevEl: '.slider2-prev',
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerGroup:1,
             },
             1800: {
-                slidesPerView: 5,  
+                slidesPerView: 6,  
                 slidesPerGroup: 1, 
             },
             
