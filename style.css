@@ -62,12 +62,6 @@ body {
   border-radius: 50px;
 
 }
-
-.slider2-slide {
-
-  
-
-}
 .slider1-slide {
     max-width: 100%;
   font-size: 18px;
@@ -230,7 +224,7 @@ body {
     
     position: absolute;
     bottom: 50px;
-    font-size: 19px;
+    font-size: 18px;
 
     padding-left: .5rem;
     transition: transform 0.4s ease;
